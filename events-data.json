@@ -1,0 +1,35 @@
+[
+  {
+    "id": "seed-1",
+    "date": "2026-06-06",
+    "badge": "Juin 2026",
+    "category": "Conférence",
+    "title": "Facturation électronique",
+    "description": "Retour en images sur l’événement consacré à la facturation électronique, avec l’intervention de Faissal Boukhrisa et des échanges avec les participants.",
+    "images": [
+      "https://media.licdn.com/dms/image/v2/D4D22AQEYSbLmVHzTMg/feedshare-shrink_800/B4DZ7CcU.TGUAc-/0/1781378666876?e=2147483647&t=PXKauU8E-DmxuweWIItUR3ctFCAeRxyU1IyKrzH8a8k&v=beta"
+    ]
+  },
+  {
+    "id": "seed-2",
+    "date": "2025-06-14",
+    "badge": "14 juin 2025",
+    "category": "Workshop",
+    "title": "Contrôle interne",
+    "description": "Workshop à l’Hôtel Farah Tanger : « Transformation de la contrainte perçue au levier de performance stratégique », animé par Amine Bouyousfi et Loubna Ourtassi.",
+    "images": [
+      "https://media.licdn.com/dms/image/v2/D4E22AQFJWymkQWCzcw/feedshare-shrink_800/B4EZdyyFq8HsAg-/0/1749977434516?e=2147483647&t=9j6wRQUUGO5FXc4pcDJ0VkW5oBIdal1E-TrL3bGtG3Y&v=beta"
+    ]
+  },
+  {
+    "id": "seed-3",
+    "date": "2025-04-22",
+    "badge": "22 avril 2025",
+    "category": "Afterwork",
+    "title": "Risques opérationnels & digitalisation RH",
+    "description": "Afterwork organisé avec EPEGA Assurance autour de la maîtrise des risques opérationnels et de la digitalisation des processus RH.",
+    "images": [
+      "https://media.licdn.com/dms/image/v2/D4E22AQFRgMBlnEadHA/feedshare-shrink_800/B4EZZ9.jCqHYAg-/0/1745874275217?e=2147483647&t=vfiMm0RRgLrzYN42v3wStxGJzszlML0PnGD3YPXmYn8&v=beta"
+    ]
+  }
+]

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Club des Financiers du Nord</title>
+  <meta name="description" content="Club des Financiers du Nord : documentation, événements, membres du bureau et accès administrateur." />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a href="#" class="brand">
+        <img src="/logo.jpg" alt="Logo du Club des Financiers du Nord" class="brand-logo" />
+        <span>
+          <strong>Club des Financiers du Nord</strong>
+          <small>Tanger · association professionnelle</small>
+        </span>
+      </a>
+
+      <nav class="category-nav" aria-label="Navigation principale">
+        <button class="nav-btn is-active" type="button" data-panel-btn="home">Accueil</button>
+        <button class="nav-btn" type="button" data-panel-btn="docs">Documentation du club</button>
+        <button class="nav-btn" type="button" data-panel-btn="events">Événements</button>
+        <button class="nav-btn" type="button" data-panel-btn="bureau">Membre de bureau</button>
+        <button class="nav-link" id="joinButton" type="button">Nous rejoindre</button>
+      </nav>
+    </header>
+
+    <main class="panel-stage">
+      <section class="panel is-visible" data-panel="home">
+        <div class="home-grid">
+          <article class="hero-card glass-card">
+            <p class="eyebrow">Association à but non lucratif · création 2008</p>
+            <h1>Un site direct. Pas du blabla. Le CFN, proprement.</h1>
+            <p class="lead">
+              Navigation par catégories en haut, page d’accueil visible dès l’entrée, zéro scroll imposé sur desktop,
+              et une structure faite pour les événements, les documents officiels et le bureau du club.
+            </p>
+            <div class="hero-chips">
+              <span>Tanger</span>
+              <span>Finance</span>
+              <span>Gouvernance</span>
+              <span>Événements</span>
+            </div>
+            <div class="hero-actions">
+              <button class="primary-btn" type="button" data-panel-btn="events">Voir les événements</button>
+              <button class="secondary-btn" type="button" data-panel-btn="docs">Ouvrir la documentation</button>
+            </div>
+          </article>
+
+          <aside class="home-side">
+            <article class="mini-card glass-card">
+              <span class="stat-label">Siège</span>
+              <strong>Tanger</strong>
+              <p>Association professionnelle du Nord.</p>
+            </article>
+            <article class="mini-card glass-card">
+              <span class="stat-label">Mission</span>
+              <strong>Partager, former, connecter</strong>
+              <p>Le contenu du site suit la même logique que le club.</p>
+            </article>
+            <article class="mini-card glass-card">
+              <span class="stat-label">Accès</span>
+              <strong>Par catégories en haut</strong>
+              <p>Tu changes de page sans faire défiler la page.</p>
+            </article>
+            <article class="mini-feature glass-card">
+              <div>
+                <span class="stat-label">Dernier événement</span>
+                <h2 id="featuredEventTitle">Chargement…</h2>
+                <p id="featuredEventDescription"></p>
+              </div>
+              <button class="text-btn" type="button" data-panel-btn="events">Ouvrir</button>
+            </article>
+          </aside>
+        </div>
+      </section>
+
+      <section class="panel" data-panel="docs">
+        <div class="panel-head">
+          <p class="eyebrow">Documentation du club</p>
+          <h2>Les documents officiels, regroupés au même endroit.</h2>
+          <p class="panel-note">Invitation, procès-verbal, statuts, charte, adhésion, renouvellement et RIB : tout est rangé ici.</p>
+        </div>
+        <div class="doc-grid" id="docGrid"></div>
+      </section>
+
+      <section class="panel" data-panel="events">
+        <div class="panel-head split">
+          <div>
+            <p class="eyebrow">Événements</p>
+            <h2>Les cartes reprennent automatiquement le même style.</h2>
+            <p class="panel-note">Ajout, modification ou suppression depuis l’admin. Les photos suivent le même rendu partout.</p>
+          </div>
+          <div class="filter-bar" id="eventFilters"></div>
+        </div>
+        <div id="eventsGrid" class="events-grid"></div>
+      </section>
+
+      <section class="panel" data-panel="bureau">
+        <div class="panel-head">
+          <p class="eyebrow">Membre de bureau</p>
+          <h2>Le bureau exécutif du CFN.</h2>
+          <p class="panel-note">Je n’ai pas inventé des photos : elles ne sont pas dans les fichiers fournis. Les emplacements sont prêts pour les vraies images.</p>
+        </div>
+        <div class="bureau-grid" id="bureauGrid"></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal hidden" id="galleryModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-window">
+      <button class="modal-close" type="button" data-close-modal>×</button>
+      <div class="modal-media">
+        <img id="modalImage" alt="Photo de l’événement" />
+      </div>
+      <div class="modal-content">
+        <div class="modal-topline">
+          <span id="modalDate" class="pill"></span>
+          <span id="modalCategory" class="pill"></span>
+        </div>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDescription"></p>
+        <div class="modal-controls">
+          <button class="secondary-btn" id="prevImageBtn" type="button">Précédent</button>
+          <button class="primary-btn" id="nextImageBtn" type="button">Suivant</button>
+        </div>
+        <div id="thumbStrip" class="thumb-strip"></div>
+      </div>
+    </div>
+  </div>
+
+  <script defer src="/app.js"></script>
+</body>
+</html>

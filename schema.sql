@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS events (
+  id TEXT PRIMARY KEY,
+  date TEXT NOT NULL,
+  badge TEXT,
+  category TEXT NOT NULL,
+  title TEXT NOT NULL,
+  description TEXT NOT NULL,
+  images_json TEXT NOT NULL DEFAULT '[]',
+  created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
