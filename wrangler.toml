@@ -1,3 +1,6 @@
-name = "club-financiers-officiel"
-pages_build_output_dir = "."
+name = "club-des-financiers-du-nord-v7"
 compatibility_date = "2026-07-17"
+pages_build_output_dir = "."
+
+[env.production]
+name = "club-des-financiers-du-nord-v7"
